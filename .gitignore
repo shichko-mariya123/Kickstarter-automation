@@ -1,0 +1,28 @@
+### Java template
+*.class
+src/main/java/Temp.java
+src/main/java/Temp2.java
+
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+*.iml
+*.ipr
+*.iws
+
+## Directory-based project format:
+.idea/
+
+## Plugin-specific files:
+/out/
+
+# mpeltonen/sbt-idea plugin
+.idea_modules/
+
+# Maven stuff
+target/
+
+*.log
