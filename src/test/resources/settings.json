@@ -8,7 +8,7 @@
   "driverSettings": {
     "android": {
       "deviceKey": "Android_Emulator",
-      "applicationPath": "/home/ITRANSITION.CORP/m.shichko/kickstarter/src/test/resources/apps/Kickstarter.com.apk",
+      "applicationPath": ".src/test/resources/apps/Kickstarter.com.apk",
       "capabilities": {
         "platformName": "Android",
         "automationName": "UiAutomator2"
@@ -17,7 +17,7 @@
     },
     "ios": {
       "deviceKey": "iOS_Simulator",
-      "applicationPath": "/home/ITRANSITION.CORP/m.shichko/kickstarter/src/test/resources/apps/Kickstarter.com.apk",
+      "applicationPath": ".src/test/resources/apps/Kickstarter.com.apk",
       "capabilities": {
         "platformName": "iOS",
         "automationName": "XCUITest"

@@ -19,7 +19,6 @@ public class PopularScreen extends BaseAllProjectsScreen {
     public Project getProjectInfo (int index){
         swipeToActualProject(index);
         AqualityServices.getLogger().info("Get information about project number: " + index);
-        System.out.println(lblName.getElement().getCssValue("style"));
         return Project.builder()
                 .name(StringUtil.removeBlurb(lblName.getText()))
                 .percent(lblFunded.getText())
