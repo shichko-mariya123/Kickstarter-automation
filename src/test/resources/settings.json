@@ -1,4 +1,6 @@
 {
+  "testData": "test-data",
+  "environment": "config",
   "platformName": "android",
   "isRemote": true,
   "remoteConnectionUrl": "http://127.0.0.1:4723/wd/hub",
