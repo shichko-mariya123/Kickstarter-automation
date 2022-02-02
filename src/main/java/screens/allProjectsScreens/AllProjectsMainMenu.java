@@ -31,7 +31,7 @@ public class AllProjectsMainMenu extends BaseControlsScreen {
             return getElementFactory()
                     .getLink(By.xpath(String.format(menuItemLocator, endMenuItem.getName())),
                             endMenuItem.getName() + " menu item")
-                    .state().isDisplayed();
+                    .state().waitForNotDisplayed();
         });
         startMenuItem = endMenuItem;
     }
