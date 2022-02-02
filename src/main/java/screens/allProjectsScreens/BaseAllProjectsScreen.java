@@ -17,9 +17,10 @@ public abstract class BaseAllProjectsScreen extends BaseControlsScreen {
     private final String PROJECT_LOCATOR = "//*[@resource-id = '%s:id/project_card_view_group' and @index = %d]";
 
     private final int indexOfCurrentProject = 0;
-    protected final ILabel lblAllInsideScrollView = getLabel("discovery_recycler_view");
-    protected final ILabel lblProjectName = getLabel("name_and_blurb_text_view");
-    private final IButton btnSearch = getButton("search_button");
+    protected final ILabel lblAllInsideScrollView = getLabel("discovery_recycler_view",
+    "All inside scroll view");
+    protected final ILabel lblProjectName = getLabel("name_and_blurb_text_view", "Name and blurb label");
+    private final IButton btnSearch = getButton("search_button", "Search button");
     private AllProjectsMainMenu allProjectsMainMenu = new AllProjectsMainMenu();
     private List projects = new ArrayList<>();
 

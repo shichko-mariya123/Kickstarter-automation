@@ -13,10 +13,11 @@ public class AllProjectsMainMenu extends BaseControlsScreen {
     protected final ILabel lblProjectCardViewGroup = getLabel("project_card_view_group",
             "Project card view group");
     private final String menuItemLocator = "//*[text() = '%s' and @selected = 'true']";
-    private static AllProjectsMenuItem startMenuItem = AllProjectsMenuItem.MAGIC;
+    private static AllProjectsMenuItem startMenuItem;
 
     protected AllProjectsMainMenu() {
         super(By.name("All Projects"), "All projects main menu");
+        startMenuItem = AllProjectsMenuItem.MAGIC;
     }
 
     public void swipe(AllProjectsMenuItem endMenuItem) {
@@ -27,16 +28,11 @@ public class AllProjectsMainMenu extends BaseControlsScreen {
             } else if (startMenuItem.ordinal() > endMenuItem.ordinal()) {
                 TouchActions.swipe(lblProjectCardViewGroup, SwipeDirection.RIGHT);
             }
-
-            return isMenuItemSelected(endMenuItem);
+            return getElementFactory()
+                    .getLink(By.xpath(String.format(menuItemLocator, endMenuItem.getName())),
+                            endMenuItem.getName() + " menu item")
+                    .state().isDisplayed();
         });
         startMenuItem = endMenuItem;
-    }
-
-    private boolean isMenuItemSelected(AllProjectsMenuItem menuItem) {
-        String name = menuItem.getName();
-        return getElementFactory()
-                .getLink(By.xpath(String.format(menuItemLocator, name)), name + " menu item")
-                .state().isDisplayed();
     }
 }
