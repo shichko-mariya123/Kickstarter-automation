@@ -15,11 +15,13 @@ public class SearchScreen extends BaseAllProjectsScreen{
     }
 
     private final String nameOfSearchResult = "//*[contains (@text, '%s')]";
-    private final ITextBox txbSearch = getTextBox("search_edit_text");
-    private final ILabel lblFeaturedSearchResult = getLabel("featured_search_result_view");
-    private final ILabel lblFunded = getLabel("search_result_percent_funded_text_view");
-    private final ILabel lblName = getLabel("project_name_text_view");
-    private final ILabel lblDeadlineCountdownLbl = getLabel("search_result_deadline_countdown_text_view");
+    private final ITextBox txbSearch = getTextBox("search_edit_text", "Search text box");
+    private final ILabel lblFeaturedSearchResult = getLabel("featured_search_result_view",
+            "Featured search result");
+    private final ILabel lblFunded = getLabel("search_result_percent_funded_text_view", "Funded label");
+    private final ILabel lblName = getLabel("project_name_text_view", "Name label");
+    private final ILabel lblDeadlineCountdownLbl = getLabel("search_result_deadline_countdown_text_view",
+            "Deadline label");
 
     public void searchProject (String projectName){
         txbSearch.clearAndType(projectName);

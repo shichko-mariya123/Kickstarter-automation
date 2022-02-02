@@ -1,6 +1,7 @@
 import models.Project;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import screens.allProjectsScreens.AllProjectsMenuItem;
 import screens.allProjectsScreens.MagicScreen;
 import screens.allProjectsScreens.PopularScreen;
 import screens.allProjectsScreens.SearchScreen;
@@ -23,7 +24,7 @@ public class GetFundingAndDaysOfPopularProjectTest extends BaseAndroidTest {
 
     @Test
     public void getFundingAndDaysOfPopularProjectTest() throws ParseException {
-        magicScreen.swipeToPopular();
+        magicScreen.getAllProjectsMainMenu().swipe(AllProjectsMenuItem.POPULAR);
         project = popularScreen.getProjectInfo(ACTUAL_PROJECT_NUMBER);
         popularScreen.clickOnSearchBtn();
         searchScreen.searchProject(project.getName());

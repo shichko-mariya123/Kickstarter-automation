@@ -12,9 +12,9 @@ public class PopularScreen extends BaseAllProjectsScreen {
         super(By.name("POPULAR"), "Popular screen");
     }
 
-    private final ILabel lblFunded = getLabel("percent");
-    private final ILabel lblName = getLabel("name_and_blurb_text_view");
-    private final ILabel lblDeadlineCountdownLbl = getLabel("deadline_countdown");
+    private final ILabel lblFunded = getLabel("percent", "Funded label");
+    private final ILabel lblName = getLabel("name_and_blurb_text_view", "Name label");
+    private final ILabel lblDeadlineCountdownLbl = getLabel("deadline_countdown", "Deadline label");
 
     public Project getProjectInfo (int index){
         swipeToActualProject(index);
