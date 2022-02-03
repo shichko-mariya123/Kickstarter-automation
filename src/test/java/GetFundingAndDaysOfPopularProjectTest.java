@@ -31,7 +31,7 @@ public class GetFundingAndDaysOfPopularProjectTest extends BaseAndroidTest {
         Assert.assertTrue(searchScreen.isProjectDisplayed(project.getName()), "Project should be displayed");
         Assert.assertEquals(project, searchScreen.getProjectInfo(), "Project information should be the same");
         searchScreen.clickOnFeaturedSearchResultProject();
-        Assert.assertEquals(DateUtil.getNumberOfDaysToPresentDate(overviewScreen
+        Assert.assertEquals(project.getDeadlineCountdown(), DateUtil.getNumberOfDaysToPresentDate(overviewScreen
                 .getFundedDate()), "The number of days remaining should match the funding date");
     }
 }
